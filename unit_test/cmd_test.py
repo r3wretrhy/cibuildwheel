@@ -20,6 +20,7 @@ if TYPE_CHECKING:
         "a|b",
         "100%PATH%",
         "caret^char",
+        "package[extra]<5,>=4",
     ],
 )
 def test_call_preserves_cmd_metacharacters(value: str) -> None:

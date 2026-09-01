@@ -48,8 +48,7 @@ def call(
     *args. Resolves the executable with shutil.which so PATH/PATHEXT lookup
     matches across platforms (https://github.com/python/cpython/issues/52803).
     Path arguments are converted to strings. shell=False: on Windows, a list
-    plus shell=True is parsed by cmd.exe, which splits on ``&``/``|`` and
-    expands ``%VAR%``.
+    plus shell=True is parsed by cmd.exe, which interprets shell metacharacters.
     """
     args_ = [str(arg) for arg in args]
     # print the command executing for the logs
